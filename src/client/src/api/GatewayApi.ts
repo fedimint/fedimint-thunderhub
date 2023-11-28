@@ -8,7 +8,7 @@ import { GatewayInfo, Federation } from './types';
 const { publicRuntimeConfig } = getConfig();
 
 // GatewayApi is an implementation of the ApiInterface
-export class GatewayApi {
+class GatewayApi {
   private baseUrl: string | undefined = publicRuntimeConfig.fmGatewayUrl;
   private password: string | undefined = publicRuntimeConfig.fmGatewayPassword;
 
@@ -16,6 +16,12 @@ export class GatewayApi {
     if (this.baseUrl === undefined) {
       throw new Error(
         'Misconfigured Gateway API. Make sure FM_GATEWAY_API is configured appropriately'
+      );
+    }
+
+    if (this.password === undefined) {
+      throw new Error(
+        'Misconfigured Gateway API. Make sure gateway password is configured appropriately'
       );
     }
 
@@ -40,7 +46,6 @@ export class GatewayApi {
 
       throw responseToError(res);
     } catch (error) {
-      console.log(`baseUrl`, this.baseUrl);
       return Promise.reject({ message: 'Error fetching gateway info', error });
     }
   };
@@ -84,7 +89,7 @@ export class GatewayApi {
 
   requestWithdrawal = async (
     federationId: string,
-    amountSat: number,
+    amountSat: number | 'all',
     address: string
   ): Promise<string> => {
     try {
