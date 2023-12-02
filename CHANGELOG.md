@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.26](https://github.com/apotdevin/thunderhub/compare/v0.13.25...v0.13.26) (2023-11-30)
+
+
+### Bug Fixes
+
+* linting ([0212be0](https://github.com/apotdevin/thunderhub/commit/0212be08e22e28e70a29cd68e51438c44ab3e2d1))
+
+
+### Improvements
+
+* downgrade docker node version ([#592](https://github.com/apotdevin/thunderhub/issues/592)) ([d66aca8](https://github.com/apotdevin/thunderhub/commit/d66aca8e229e882da46d8ee0715b4daf71aa9348))
+
+### [0.13.25](https://github.com/apotdevin/thunderhub/compare/v0.13.24...v0.13.25) (2023-11-30)
+
+
+### Features
+
+* add nix flake ([#584](https://github.com/apotdevin/thunderhub/issues/584)) ([4e92870](https://github.com/apotdevin/thunderhub/commit/4e928702cf275c96d5ad51744494ef26816be6b6))
+
+
+### Improvements
+
+* bump deps ([2b1bf30](https://github.com/apotdevin/thunderhub/commit/2b1bf30029fa1cf85ffea99cc7163ed0e5a27e83))
+
 ### [0.13.24](https://github.com/apotdevin/thunderhub/compare/v0.13.23...v0.13.24) (2023-11-23)
 
 
