@@ -151,8 +151,8 @@ export const saveToPc = (
   link.download = isCsv
     ? `${filename}.csv`
     : isJson
-    ? `${filename}.json`
-    : `${filename}.txt`;
+      ? `${filename}.json`
+      : `${filename}.txt`;
   link.href = url;
   link.click();
 };
